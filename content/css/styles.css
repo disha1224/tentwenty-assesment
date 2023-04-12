@@ -1,0 +1,305 @@
+/* vendors */ /* Import all Vendor Specific Files */ /*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*Default base files*/
+/* Variables */ /* Default styles */
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+p,
+ul, li, ol,
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+ul, li, a {
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+button,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Utilities */
+.contact-button {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #221F20;
+  border: 1px solid #000000;
+  padding: 10px 10px 10px 15px;
+  margin: 5px 0 10px;
+}
+.contact-button img {
+  padding-left: 20px;
+}
+
+/* Typography */
+/*Layouts*/
+/* Nav Styles */
+.navbar {
+  background-color: #ffffff;
+  padding: 15px 20px;
+}
+@media (min-width: 992px) {
+  .navbar {
+    position: absolute;
+    top: 20px;
+    margin: 0 20px;
+    padding: 15px 30px;
+  }
+}
+.navbar .navbar-collapse {
+  position: fixed;
+  top: 85px;
+  width: 55%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: right 900ms ease-in-out;
+}
+@media (min-width: 768px) {
+  .navbar .navbar-collapse {
+    width: 30%;
+  }
+}
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    position: relative;
+    top: 0;
+    width: 0;
+  }
+}
+.navbar .navbar-collapse.collapsing {
+  right: -75%;
+}
+.navbar .navbar-collapse.show {
+  right: 0;
+  transition: right 300ms ease-in-out;
+}
+.navbar .navbar-toggler.collapsed ~ .navbar-collapse {
+  transition: right 500ms ease-in-out;
+}
+.navbar .navbar-light,
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar button[aria-expanded=true] {
+  background-image: url("../images/content-image/icon-arrow-left.svg");
+  background-repeat: no-repeat;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.navbar button[aria-expanded=false] {
+  background-image: url("../images/content-image/icon-hamburger.png");
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000000;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 15px 15px;
+}
+@media (min-width: 992px) {
+  .navbar-light .navbar-nav .nav-link {
+    padding: 25px 10px;
+  }
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: none;
+}
+
+/* Footer Styles */
+/* Module files */
+/* theme/custo files */
+/* Home Styles */
+.carousel-section {
+  position: relative;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.carousel-section .box-border-rotate {
+  position: absolute;
+  bottom: 20px;
+  z-index: 4;
+  left: 25px;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+}
+.carousel-section .box-border-rotate::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: 100% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#456262, #ffffff);
+  animation: rotate 10s linear infinite;
+}
+.carousel-section .box-border-rotate::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.circular-img-display {
+  width: 99%;
+  height: 100%;
+  background: #c94b4b;
+  /* skipable part */
+  /* just a bit of responsive */
+}
+.circular-img-display .wrapper {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+}
+.circular-img-display .item {
+  transition: 0.5s;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #4b134f;
+  display: inline-block;
+  margin: 0;
+  font-size: 3em;
+  font-family: sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circular-img-display .controls {
+  position: absolute;
+  top: 10px;
+  width: 99%;
+  text-align: center;
+}
+.circular-img-display .left, .circular-img-display .right {
+  display: inline-block;
+  color: #fff;
+  font-size: 3em;
+  cursor: pointer;
+}
+.circular-img-display .left {
+  margin-right: 10px;
+}
+.circular-img-display .right {
+  margin-left: 10px;
+}
+.circular-img-display .link-list {
+  position: absolute;
+  right: 20px;
+}
+.circular-img-display .link-list > p {
+  color: #fff;
+  font-family: sans-serif;
+}
+.circular-img-display .link-list > a {
+  text-decoration: none;
+  color: #fff;
+  font-family: sans-serif;
+}
+.circular-img-display .coffee {
+  width: 96%;
+  position: absolute;
+  bottom: 0px;
+  text-align: right;
+  color: #fff;
+  font-family: sans-serif;
+}
+.circular-img-display .ptr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c94b4b;
+  background: #4b134f;
+  position: absolute;
+  width: 220px;
+  height: 50px;
+  text-decoration: none;
+  border: 1px solid #b74b4b;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  bottom: 50px;
+  right: 20px;
+  transition: 0.3s;
+}
+.circular-img-display a:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+.circular-img-display .selection-off {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+   supported by Chrome and Opera */
+}
+@media screen and (max-width: 768px) {
+  .circular-img-display .item {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+  }
+  .circular-img-display .wrapper {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+  }
+  .circular-img-display .controls {
+    top: 20px;
+  }
+  .circular-img-display .left {
+    margin-right: 50px;
+  }
+  .circular-img-display .right {
+    margin-left: 50px;
+  }
+  .circular-img-display a {
+    bottom: 20px;
+    height: 50px;
+    width: 200px;
+    font-weight: 600;
+    font-size: 1em;
+  }
+}/*# sourceMappingURL=styles.css.map */
