@@ -21,7 +21,6 @@ export default function Products() {
   const scrollRef = useRef(null);
 
   const handleScroll = () => {
-    debugger;
     const container = scrollRef.current;
     const children = Array.from(container.children);
     const containerCenter = container.offsetWidth / 2;
@@ -80,7 +79,7 @@ export default function Products() {
         <div
           ref={scrollRef}
           className="flex gap-[90px] overflow-x-scroll no-scrollbar px-6 scroll-smooth"
-          style={{ scrollSnapType: 'x mandatory' }}
+          style={{ scrollSnapType: 'x mandatory', overflowY: 'hidden' }}
         >
           {slides.map((slide, i) => {
             const offset = i - index;
