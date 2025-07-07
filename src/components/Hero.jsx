@@ -6,6 +6,7 @@ import img2 from "../assets/buildings.jpg";
 import img3 from "../assets/beach.jpg";
 import img4 from "../assets/snow.jpg";
 import PreviewBox from "./PreviewBox";
+import SlideText from './SlideText';
 const images = [img1, img2, img3, img4];
 
 export default function Carousel() {
@@ -41,11 +42,10 @@ export default function Carousel() {
         src={images[index]}
         alt="current"
         className="w-full h-full object-cover absolute z-0"
-      />
-      <div className="absolute top-45 left-[28px] lg:top-87 lg:left-[136px] text-white z-20 mb-4">
-        <p className='font-normal text-[14px] lg:text-[16px]'>Welcome To TenTwenty Farms</p>
-        <h1 className='font-normal text-[46px] lg:text-[64px] leading-[1.2]'>From Our <br className='lg:hidden' /> Farms <br /> To Your Hands</h1>
-      </div>
+      />  
+
+      <SlideText index={index} />
+
       {/* Incoming Next Image */}
       <AnimatePresence>
         {nextIndex !== null && (
