@@ -22,7 +22,7 @@ html{
     top: 0;
     left: 0;
     background: white;
-    z-index: 10;
+    z-index: 40;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -30,10 +30,9 @@ html{
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-
 .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
